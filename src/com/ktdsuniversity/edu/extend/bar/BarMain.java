@@ -34,5 +34,12 @@ public class BarMain {
 		Guest guest3 = new Guest(5, 7, 43, alcoholArray, beverageArray);
 		
 		bar.beverageSell("물", guest1);
+		bar.alcoholSell("데낄라", guest1);
+		
+		bar.beverageSell("콜라", guest2);
+		bar.alcoholSell("카스", guest2);
+		
+		bar.beverageSell("사이다", guest3);
+		bar.alcoholSell("진로 소주", guest3);
 	}
 }

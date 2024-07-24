@@ -6,8 +6,6 @@ public class Alcohol extends Goods{
 	private int alcoholDegree;
 	private int alcoholPrice;
 	private int alcoholStock;
-	private Guest guest;
-	private Bar bar;
 	
 	public Alcohol(String type, String alcoholName, int alcoholDegree, int alcoholPrice, int alcoholStock) {
 		super(type);
@@ -33,8 +31,8 @@ public class Alcohol extends Goods{
 		return alcoholStock;
 	}
 	
-	public void decreaseAlcoholStock() {
-		this.alcoholStock -= guest.getAlcoholOrderNumber();
+	public void decreaseAlcoholStock(int orderNumber) {
+		this.alcoholStock -= orderNumber;
 	}
 	
 }
