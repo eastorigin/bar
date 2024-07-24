@@ -33,16 +33,6 @@ public class Alcohol extends Goods{
 		return alcoholStock;
 	}
 	
-//	public void alcoholSell(int alcoholOrderNumber) {
-//		if(this.guest.getAge() < 19) {
-//			System.out.println("19세 미만의 손님에게는 주류를 판매할 수 없습니다");
-//		}else if(this.guest.isDrunken(name)) {
-//			System.out.println("손님께서 취하셔서 주류를 팔지 못합니다");
-//		}else {
-//			this.decreaseAlcoholStock(alcoholOrderNumber);
-//		}
-//	}
-	
 	public void decreaseAlcoholStock() {
 		this.alcoholStock -= guest.getAlcoholOrderNumber();
 	}
