@@ -18,11 +18,15 @@ public class Beverage extends Goods{
 		return beveragePrice;
 	}
 	
-	public void decreaseBeverageStock() {
-		this.beverageStock -= this.guest.getOrderNumber();
+	public String getBeverageName() {
+		return beverageName;
 	}
 	
-	public void beverageSell() {
-		
+	public int getBeverageStock() {
+		return beverageStock;
+	}
+	
+	public void decreaseBeverageStock() {
+		this.beverageStock -= this.guest.getBeverageOrderNumber();
 	}
 }
