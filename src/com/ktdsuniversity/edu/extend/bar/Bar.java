@@ -29,19 +29,19 @@ public class Bar {
 		}
 	}
 	
-	public void beverageSell(String beverageName) {
+	public void beverageSell(String beverageName, Guest guest) {
 		for(int i = 0; i < beverage.length; i++) {
 			if(beverage[i].getBeverageName().equals(beverageName)) {
 				int beverageStock = beverage[i].getBeverageStock();
 				int guestBeverageOrderNumber = guest.getBeverageOrderNumber();
 				if(beverageStock < guestBeverageOrderNumber) {
 					guestBeverageOrderNumber = beverageStock;
-					beverage[i].decreaseBeverageStock();
+					beverage[i].decreaseBeverageStock(this.guest);
 					this.increaseBeverageBarMoney(beverageName);
 					System.out.println("재고가 부족하여 현재 있는 재고만 판매하였습니다");
 					return;
 				}else {
-					beverage[i].decreaseBeverageStock();
+					beverage[i].decreaseBeverageStock(this.guest);
 					this.increaseBeverageBarMoney(beverageName);
 					return;
 				}
@@ -49,7 +49,7 @@ public class Bar {
 		}
 	}
 	
-	public void alcoholSell(String alcoholName) {
+	public void alcoholSell(String alcoholName, Guest guest) {
 		for(int i = 0; i < alcohol.length; i++) {
 			if(alcohol[i].getAlcoholName().equals(alcoholName)) {
 				if(guest.isAdult() && !guest.isDrunken(alcoholName)) {

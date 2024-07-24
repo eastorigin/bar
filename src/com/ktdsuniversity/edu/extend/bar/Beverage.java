@@ -12,6 +12,7 @@ public class Beverage extends Goods{
 		this.beverageName = beverageName;
 		this.beveragePrice = beveragePrice;
 		this.beverageStock = beverageStock;
+		this.guest = guest;
 	}
 	
 	public int getBeveragePrice() {
@@ -26,7 +27,7 @@ public class Beverage extends Goods{
 		return beverageStock;
 	}
 	
-	public void decreaseBeverageStock() {
+	public void decreaseBeverageStock(Guest guest) {
 		this.beverageStock -= this.guest.getBeverageOrderNumber();
 	}
 }

@@ -50,4 +50,8 @@ public class Guest {
 			return false;
 		}
 	}
+	
+	public void order() {
+		
+	}
 }

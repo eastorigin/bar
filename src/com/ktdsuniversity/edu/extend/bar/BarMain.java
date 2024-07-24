@@ -33,6 +33,6 @@ public class BarMain {
 		Guest guest2 = new Guest(4, 3, 9, alcoholArray, beverageArray);
 		Guest guest3 = new Guest(5, 7, 43, alcoholArray, beverageArray);
 		
-		
+		bar.beverageSell("물", guest1);
 	}
 }
