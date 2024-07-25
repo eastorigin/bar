@@ -9,6 +9,9 @@ public class Bar extends AbstractBar{
 	 * 2. 모든 연령대가 이요할 수 있는 바
 	 * 		- 주류를 사려면 반드시 성인이어야 한다
 	 * 		- 자유롭게 주류를 주문할 수 없음
+	 * 
+	 * 차이점 (사상) - 나이를 확인하는 기능 (추상 메소드)
+	 * 
 	 */
 	public Bar(int barMoney, Beverage[] beverage, Alcohol[] alcohol) {
 		super(barMoney, beverage, alcohol);
