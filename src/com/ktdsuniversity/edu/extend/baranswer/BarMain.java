@@ -26,18 +26,19 @@ public class BarMain {
 		Beverage[] beverageArray = {water, coke, cider, tequila, cass, soju};
 		
 		Bar bar = new Bar(100000, beverageArray);
+		AdultBar adultBar = new AdultBar(200000, beverageArray);
 		
 		Guest guest1 = new Guest(2, 1, 22, beverageArray);
 		Guest guest2 = new Guest(4, 3, 9, beverageArray);
 		Guest guest3 = new Guest(5, 7, 43, beverageArray);
 		
 		bar.beverageSell("물", guest1);
-		bar.beverageSell("데낄라", guest1);
+		adultBar.beverageSell("데낄라", guest1);
 		
 		bar.beverageSell("콜라", guest2);
-		bar.beverageSell("카스", guest2);
+		adultBar.beverageSell("카스", guest2);
 		
 		bar.beverageSell("사이다", guest3);
-		bar.beverageSell("진로 소주", guest3);
+		adultBar.beverageSell("진로 소주", guest3);
 	}
 }

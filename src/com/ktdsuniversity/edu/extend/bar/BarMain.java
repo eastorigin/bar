@@ -28,6 +28,7 @@ public class BarMain {
 		Alcohol[] alcoholArray = {tequila, cass, soju};
 		
 		Bar bar = new Bar(100000, beverageArray, alcoholArray);
+		AdultBar adultBar = new AdultBar(200000, beverageArray, alcoholArray);
 		
 		Guest guest1 = new Guest(2, 1, 22, alcoholArray, beverageArray);
 		Guest guest2 = new Guest(4, 3, 9, alcoholArray, beverageArray);
@@ -41,5 +42,16 @@ public class BarMain {
 		
 		bar.beverageSell("사이다", guest3);
 		bar.alcoholSell("진로 소주", guest3);
+		
+		System.out.println("======================");
+		System.out.println("성인 전용 바");
+		adultBar.beverageSell("물", guest1);
+		adultBar.alcoholSell("데낄라", guest1);
+		
+		adultBar.beverageSell("콜라", guest2);
+		adultBar.alcoholSell("카스", guest2);
+		
+		adultBar.beverageSell("사이다", guest3);
+		adultBar.alcoholSell("진로 소주", guest3);
 	}
 }
