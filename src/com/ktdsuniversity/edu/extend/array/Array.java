@@ -20,13 +20,8 @@ public class Array {
 		// Arrays.sort(array);
 		
 		int[] sortArray = new int[array.length];
-		int minValue = array[0];
+		
 		for(int i = 0; i < array.length; i++) {
-			if(minValue > array[i+1]) {
-				minValue = array[i];
-				sortArray[i] = minValue;
-			}
-			System.out.println(sortArray[i]);
 		}
 
 	}
