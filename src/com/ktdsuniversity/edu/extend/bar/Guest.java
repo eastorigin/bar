@@ -27,9 +27,13 @@ public class Guest {
 	}
 	
 	public boolean isDrunken(String alcoholName) {
-		for(int i = 0; i < alcohol.length; i++) {
-			if(alcohol[i].getAlcoholName().equals(alcoholName)) {
-				return alcohol[i].getAlcoholDegree() * this.alcoholOrderNumber > 44;
+		if(alcohol != null) {
+			for(int i = 0; i < alcohol.length; i++) {
+				if(alcohol[i].getAlcoholName() != null) {
+					if(alcohol[i].getAlcoholName().equals(alcoholName)) {
+						return alcohol[i].getAlcoholDegree() * this.alcoholOrderNumber > 44;
+					}
+				}
 			}
 		}
 		return false;

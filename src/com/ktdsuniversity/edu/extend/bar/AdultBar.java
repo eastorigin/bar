@@ -8,11 +8,12 @@ public class AdultBar extends AbstractBar{
 	
 	@Override
 	public void alcoholSell(String alcoholName, Guest guest) {
-		if(!guest.isAdult()) {
-			System.out.println("성인만 입장 가능합니다");
-			return;
+		if(guest != null) {
+			if(!guest.isAdult()) {
+				System.out.println("성인만 입장 가능합니다");
+				return;
+			}
+			processAlcoholSell(alcoholName, guest);
 		}
-		processAlcoholSell(alcoholName, guest);
-		
 	}
 }
